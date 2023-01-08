@@ -57,7 +57,7 @@ const current_weather_details = (current) => {
 
 const f = async (search) => {
   try {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${search}&aqi=no`)
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${search}&aqi=no`)
     const data = await response.json();
     console.log(data);
     name(data.location);
