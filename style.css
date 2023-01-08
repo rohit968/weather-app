@@ -1,0 +1,224 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./images/weather-images.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.navbar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.navbar #navbar_items {
+  width: 100%;
+}
+
+.navbar span {
+  color: #ddd;
+}
+
+.navbar_search {
+  width: 40%;
+}
+
+.navbar_search form {
+  color: #bbb;
+  display: flex;
+  padding: 0.3rem;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+input[type="search"] {
+  width: 100%;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0.4rem 0.5rem;
+  font-size: 14px;
+  color: whitesmoke;
+}
+
+input[type="search"]:focus {
+  outline: none;
+}
+
+input[type="search"]::placeholder {
+  color: whitesmoke;
+}
+
+button {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button[type="submit"]:hover {
+  opacity: 1;
+}
+
+.weather_details {
+  margin: 2rem 0;
+}
+
+.weather_details .container {
+  background-image: url("./images/div_image.jpg") transparent;
+  backdrop-filter: blur(15px);
+  color: whitesmoke;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  min-height: 60vh;
+  border-radius: 40px;
+  padding: 1rem 0;
+}
+
+.weather_details h1 {
+  position: relative;
+  color: whitesmoke;
+  margin: 1rem;
+}
+
+.weather_details h1::after {
+  content: "";
+  position: absolute;
+  border: 0.1px solid whitesmoke;
+  bottom: 0;
+  width: 40%;
+  left: 30%;
+}
+
+#weather_type {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.current_weather {
+  display: flex;
+  margin: 2rem;
+  justify-content: space-around;
+}
+
+.current_weather img {
+  height: 80px;
+  width: 80px;
+}
+
+#current_other_conditions h2 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  border: 0.1px solid whitesmoke;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.sun_moon_timings {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sun_timings,
+.moon_timings {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .weather_details .container {
+    width: 80%;
+  }
+  .current_weather {
+    display: flex;
+    flex-direction: column;
+  }
+  #weather_type {
+    width: 90%;
+    margin: auto;
+  }
+  .weather_details h1::after {
+    width: 100%;
+    left: 0;
+  }
+  #current_other_conditions h2 {
+    font-size: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .sun_timings,
+  .moon_timings {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  .sun_moon_timings {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .navbar {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .weather_details .container {
+    width: 80%;
+  }
+  .current_weather {
+    display: flex;
+    flex-direction: column;
+  }
+  #weather_type {
+    width: 90%;
+    margin: auto;
+  }
+  .weather_details h1::after {
+    width: 100%;
+    left: 0;
+  }
+  #current_other_conditions h2 {
+    font-size: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .sun_timings,
+  .moon_timings {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  .sun_moon_timings {
+    flex-direction: column;
+  }
+}
