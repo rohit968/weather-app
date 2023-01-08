@@ -86,7 +86,6 @@ button[type="submit"]:hover {
 }
 
 .weather_details .container {
-  background-image: url("./images/div_image.jpg") transparent;
   backdrop-filter: blur(15px);
   color: whitesmoke;
   text-align: center;
